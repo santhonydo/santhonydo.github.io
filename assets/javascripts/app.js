@@ -264,7 +264,7 @@
 
 		function submitForm(data) {
 			$.ajax({
-        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfF5dnsz-1E73jyMA3oc169W-rDCC-PlSLsMEX5lQsNW_TWwg/formResponse",
+        url: "https://docs.google.com/a/firstdoc.co/forms/d/e/1FAIpQLSfF5dnsz-1E73jyMA3oc169W-rDCC-PlSLsMEX5lQsNW_TWwg/formResponse",
         data: {
             "entry.1809380335" : data.fname,
             "entry.1135269432" : data.email,
