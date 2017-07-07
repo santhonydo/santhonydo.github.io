@@ -1,6 +1,6 @@
 ;(function($) {
 	"use strict";
-	
+
 	$(document).ready(function() {
 
 		var $win = $(window);
@@ -9,7 +9,7 @@
 		// Load Foundation
 		$(document).foundation();
 
-		// Intro Small 
+		// Intro Small
 		$('.intro-small .intro-image').stellar({
 			horizontalScrolling: false,
 			verticalOffset: 40
@@ -93,7 +93,7 @@
 				$(this)[0].pause();
 				$('.btn-play').show();
 			});
-			
+
 		});
 
 		//Slider Services
@@ -117,7 +117,7 @@
 
 			if($(this).parents().hasClass('list-services-slider')) {
 				sliderList.stopAuto();
-				sliderList.startAuto();	
+				sliderList.startAuto();
 			}
 		});
 
@@ -166,7 +166,7 @@
 			}
 
 			$listItem
-				.toggleClass('active')	   			
+				.toggleClass('active')
 				.siblings()
 				.removeClass('active');
 
@@ -174,7 +174,7 @@
 				$listItem
 					.children('.nav-dropdown')
 					.slideToggle();
-			}	
+			}
 		});
 
 		// Mobile Nav
@@ -185,7 +185,7 @@
 				.toggleClass('active');
 
 			$('.nav').slideToggle();
-			$('.nav-dropdown').slideUp();	
+			$('.nav-dropdown').slideUp();
 		});
 
 		var isMobileWidth = false;
@@ -244,15 +244,53 @@
 						.find('.message-error')
 						.addClass('active');
 				},
-				submitHandler: function(form) { 
+				submitHandler: function(form) {
 					$(form).submit(function () {
-						$(this).ajaxSubmit();
+						var requestInfo = {}
+						requestInfo.fname = $('#field-fname').val()
+						requestInfo.email = $('#field-email').val()
+						requestInfo.tel = $('#field-tel').val()
+						requestInfo.date = $('#field-date').val()
+						requestInfo.msg = $('#field-message').val()
+
+						submitForm(requestInfo)
+						// $(this).ajaxSubmit();
 
 						return false;
 					});
 				}
 			});
 		});
+
+		function submitForm(data) {
+			$.ajax({
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfF5dnsz-1E73jyMA3oc169W-rDCC-PlSLsMEX5lQsNW_TWwg/formResponse",
+        data: {
+            "entry.1809380335" : data.fname,
+            "entry.1135269432" : data.email,
+            "entry.158212014" : data.tel,
+            "entry.1876509870" : data.date,
+            "entry.1478418136" : data.msg
+        },
+        type: "POST",
+        dataType: "jsonp",
+        statusCode: {
+            0: function () {
+              console.log('statusCode 0')
+							successModal('show')
+            },
+            200: function () {
+              console.log('statusCode 200')
+							successModal('show')
+            }
+         }
+    	 });
+		}
+
+		function successModal(showOrHide){
+			console.log(showOrHide);
+		}
+
 
 		$(function(){
 			$.stellar({
