@@ -21,3 +21,7 @@
 .custom-file-control::after {
   content: "Chose file..."
 }
+
+.form-check-label {
+  width: 145px;
+}

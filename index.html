@@ -87,19 +87,117 @@
                 <div class="form-group">
                   <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                        <div class="form-group">
-                          <label for="gender">Select your gender at birth  </label>
-                          <select class="custom-select" name="gender">
-                            <option value="F">Female</option>
-                            <option value="M">Male</option>
-                          </select>
+                      <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="gender">Select your gender at birth.</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="gender">
+                              <option value="F">Female</option>
+                              <option value="M">Male</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="form-group">
-                          <label for="symptoms">Where are you experiencing symptoms?</label>
-                          <textarea class="form-control" name="symptoms" rows="3" placeholder="Please include locations, sizes, colors, etc…"></textarea>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="sex_act">Are you currently sexually active?</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="sex_act">
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="form-group">
-                          <label for="symptoms_desc">What symptoms are you experiencing?</label>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="sex_dur">Select the last time you had sex.</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="sex_dur">
+                              <option value="days">1 to 3 days</option>
+                              <option value="week">4 to 7 days</option>
+                              <option value="weeks">1 to 2 weeks</option>
+                              <option value="month">1 month</option>
+                              <option value="months">Over 1 month</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="partner">Select the type of partner(s) you have sex with.</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="partner">
+                              <option value="yes">Male</option>
+                              <option value="no">Female</option>
+                              <option value="no">Both</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="multi_partner_yn">Do you have multiple sexual partners?</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="multi_partner_yn">
+                              <option value="yes">Yes</option>
+                              <option value="yes">No</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="multi_partner_yn">How often do you use condoms?</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="multi_partner_yn">
+                              <option value="yes">All the time</option>
+                              <option value="yes">Only some of the time</option>
+                              <option value="yes">I never use condoms</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="intercourse_type">Select the type(s) of sexual activity you are engaged in.</label>
+                          </div>
+                          <div class="form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Oral
+                            </label>
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Vaginal
+                            </label>
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Anal
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="partner_dx_sti_yn">Has your partner ever been diagnosed with STI?</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="partner_dx_sti_yn">
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="symptoms_desc">What symptoms are you experiencing?</label>
+                          </div>
                           <div class="form-check">
                             <label class="form-check-label">
                               <input class="form-check-input" type="checkbox"> Itchiness
@@ -121,35 +219,39 @@
                             </label>
                           </div>
                         </div>
-                        <div class="form-group">
-                          <label for="duration">How long have you been experiencing it?</label>
-                          <select class="custom-select" name="duration">
-                            <option value="days">1 to 3 days</option>
-                            <option value="week">4 to 7 days</option>
-                            <option value="weeks">1 to 2 weeks</option>
-                            <option value="month">1 month</option>
-                            <option value="months">Over 1 month</option>
-                          </select>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="duration">How long have you been experiencing it?</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="duration">
+                              <option value="days">1 to 3 days</option>
+                              <option value="week">4 to 7 days</option>
+                              <option value="weeks">1 to 2 weeks</option>
+                              <option value="month">1 month</option>
+                              <option value="months">Over 1 month</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="form-group">
-                          <label for="smptx_progress">Has your symptoms changed overtime?</label>
-                          <select class="custom-select" name="smptx_progress">
-                            <option value="unchanged">No change</option>
-                            <option value="worsened">Getting worse</option>
-                            <option value="improved">Getting better</option>
-                            <option value="appearance">Becoming different</option>
-                          </select>
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="smptx_progress">Has your symptoms changed overtime?</label>
+                          </div>
+                          <div class="">
+                            <select class="custom-select" name="smptx_progress">
+                              <option value="unchanged">No change</option>
+                              <option value="worsened">Getting worse</option>
+                              <option value="improved">Getting better</option>
+                              <option value="appearance">Becoming different</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="form-group">
-                          <label for="self_treat">Have you done anything to help with the symptoms and how effective has it been?</label>
-                          <textarea class="form-control" name="symptoms" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                          <label for="prev_smptx">Have you ever had these symptoms before? If so, what happened during that episode?</label>
-                          <textarea class="form-control" name="prev_smptx" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                          <label for="prev_sti">Check all sexually transmitted infection (STI) that you ever been diagnosed with in the past</label>
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                          <div class="">
+                            <label for="prev_sti">Check all sexually transmitted infection (STI) that you ever been diagnosed with in the past</label>
+                          </div>
                           <div class="form-check">
                             <label class="form-check-label">
                               <input class="form-check-input" type="checkbox"> Chlamydia
@@ -173,93 +275,53 @@
                               <input class="form-check-input" type="checkbox"> Herpes 2
                             </label>
                             <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Trichomoniasis
+                            </label>
+                            <label class="form-check-label">
                               <input class="form-check-input" type="checkbox"> HIV
                             </label>
                             <label class="form-check-label">
                               <input class="form-check-input" type="checkbox"> Syphilis
                             </label>
+
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Trichomoniasis
-                            </label>
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Other / I'm not sure
+                              <input class="form-check-input" type="checkbox"> Other/Not sure
                             </label>
                           </div>
                         </div>
-                        <div class="form-group">
-                          <label for="sex_act">Are you currently sexually active?</label>
-                          <select class="custom-select" name="sex_act">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="sex_dur">When was the last time you had sexual intercourse?</label>
-                          <select class="custom-select" name="sex_dur">
-                            <option value="days">1 to 3 days</option>
-                            <option value="week">4 to 7 days</option>
-                            <option value="weeks">1 to 2 weeks</option>
-                            <option value="month">1 month</option>
-                            <option value="months">Over 1 month</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="partner">Select the type of partner(s) you have sex with</label>
-                          <select class="custom-select" name="partner">
-                            <option value="yes">Male</option>
-                            <option value="no">Female</option>
-                            <option value="no">Both</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="multi_partner_yn">Do you have multiple sexual partners?</label>
-                          <select class="custom-select" name="multi_partner_yn">
-                            <option value="yes">Yes</option>
-                            <option value="yes">No</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="multi_partner_yn">How often do you use condoms?</label>
-                          <select class="custom-select" name="multi_partner_yn">
-                            <option value="yes">All the time</option>
-                            <option value="yes">Only some of the time</option>
-                            <option value="yes">I never use condoms</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="intercourse_type">Select the type(s) of sexual activity you are engaged in</label>
-                          <div class="form-check">
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Oral
-                            </label>
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Vaginal
-                            </label>
-                            <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Anal
-                            </label>
-                          </div>
-                        </div>
-                        <div class="form-group">
-                          <label for="partner_dx_sti_yn">Has your partner ever been diagnosed with STI?</label>
-                          <select class="custom-select" name="partner_dx_sti_yn">
-                            <option value="yes">Yes</option>
-                            <option value="no">No</option>
-                          </select>
-                        </div>
-                        <div class="form-group">
-                          <label for="file_upload">Please upload an image of the affected area(s)</label>
+                      </div>
+                      <div class="mt-4">
+                          <label for="symptoms">Where are you experiencing symptoms?</label>
+                          <textarea class="form-control" name="symptoms" rows="3" placeholder="Please include locations, sizes, colors, etc…"></textarea>
+                      </div>
+                      <div class="mt-4">
+                        <label for="symptoms">Have you done anything to help with the symptoms and how effective has it been?</label>
+                        <textarea class="form-control" name="symptoms" rows="3" placeholder="Please include locations, sizes, colors, etc…"></textarea>
+                      </div>
+                      <div class="mt-4">
+                        <label for="symptoms">Have you ever had these symptoms before? If so, what happened during that episode?</label>
+                        <textarea class="form-control" name="symptoms" rows="3" placeholder="Please include locations, sizes, colors, etc…"></textarea>
+                      </div>
+                      <div class="mt-4">
+                        <label for="file_upload">Please upload an image of the affected area(s)</label>
+                        <div class="">
                           <label class="custom-file">
                             <input type="file" id="file" class="custom-file-input">
                             <span class="custom-file-control"></span>
                           </label>
                         </div>
-
-                        <div class="row mt-5" style="display: inline !important">
-                          <div class="text-center">
-                            <button class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Submit</button>
-                          </div>
+                      </div>
+                      <div class="mt-4">
+                        <label for="email">Please enter your email address to receive your free diagnosis from a Board Certified Medical Doctor.</label>
+                        <div class="col-md-4 col-lg-4" style="padding-left: 0px">
+                          <input class="form-control" type="email" name="email" placeholder="email@example.com">
                         </div>
+                      </div>
+                      <div class="row mt-5" style="display: inline !important">
+                        <div class="text-center">
+                          <button class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Submit</button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
