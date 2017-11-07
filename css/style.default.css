@@ -784,12 +784,12 @@ footer.main-footer .copyrights a:hover {
 
 /* Footer Mediaquery -------------------------- */
 @media (max-width: 991px) {
-  footer.main-footer {
+  /*footer.main-footer {
     padding: 100px 0 0;
   }
   footer.main-footer .copyrights {
     margin-top: 100px;
-  }
+  }*/
   footer.main-footer .copyrights div[class*="col-"] {
     text-align: center !important;
   }
