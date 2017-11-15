@@ -23,7 +23,7 @@
     <!-- Custom stylesheet - for your changes-->
     <link rel="stylesheet" href="css/custom.css">
     <!-- Favicon-->
-    <link rel="shortcut icon" href="favicon.png">
+    <!-- <link rel="shortcut icon" href="favicon.png"> -->
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -38,7 +38,7 @@
             <li class="nav-item"><a href="#browser" class="nav-link link-scroll">How it works</a></li>
           </ul>
           <div class="navbar-text">
-            <a href="#questionnaire" class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Find Your Kit</a>
+            <a href="#questionnaire" class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Get tested</a>
           </div>
         </div>
       </nav>
@@ -49,8 +49,8 @@
         <div class="row d-flex">
           <div class="col-lg-6 text order-2 order-lg-1">
             <h1>Quick &amp; Easy Anonymous Testing</h1>
-            <p class="hero-text">STD comes in various forms. Find out which home testing kit is right for you by simply completing the medical questionnaire.</p>
-            <div class="CTA"><a href="#questionnaire" class="btn btn-primary btn-shadow btn-gradient link-scroll">Find Your Kit</a><a href="#browser" class="btn btn-outline-primary link-scroll">See How It Works</a></div>
+            <p class="hero-text">Think you might have a sexual transmitted infection (STI/STD)? Simply complete our quick medical questionnaire and upload any pictures of your skin condition or symptoms. Our doctors will advise you within 24 hours.</p>
+            <div class="CTA"><a href="#questionnaire" class="btn btn-primary btn-shadow btn-gradient link-scroll">Get tested</a><a href="#browser" class="btn btn-outline-primary link-scroll">See how it works</a></div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2"><img src="img/couple.jpg" alt="..." class="img-fluid"></div>
         </div>
@@ -65,9 +65,9 @@
         </div>
         <div id="myTab" role="tablist" class="nav nav-tabs">
           <div class="row">
-            <div class="col-md-4"><a id="nav-first-tab" data-toggle="tab" href="#nav-first" role="tab" aria-controls="nav-first" class="nav-item nav-link"> <span class="number">1</span>Fill out the medical questionnaire <br><br><br></a></div>
-            <div class="col-md-4"><a id="nav-second-tab" data-toggle="tab" href="#nav-second" role="tab" aria-controls="nav-second" class="nav-item nav-link"> <span class="number">2</span>Get the right testing kit delivered to your home or find local stores nearby</a></div>
-            <div class="col-md-4"><a id="nav-third-tab" data-toggle="tab" href="#nav-third" role="tab" aria-controls="nav-third" class="nav-item nav-link"> <span class="number">3</span>Optional: consult a doctor anonymously at the comfort of your home via chat</a></div>
+            <div class="col-md-4"><a id="nav-first-tab" data-toggle="tab" role="tab" aria-controls="nav-first" class="nav-item nav-link"> <span class="number">1</span>Complete the medical questionnaire.</a></div>
+            <div class="col-md-4"><a id="nav-second-tab" data-toggle="tab" role="tab" aria-controls="nav-second" class="nav-item nav-link"> <span class="number">2</span>Recieve a doctor's recommendations within 24 hours via email, and order any recommended STI testing kit.</a></div>
+            <div class="col-md-4"><a id="nav-third-tab" data-toggle="tab" role="tab" aria-controls="nav-third" class="nav-item nav-link"> <span class="number">3</span>Consult anonymously via text message or video chat with a doctor. If needed, prescriptions will be prescribed to your desired pharmacy.</a></div>
           </div>
         </div>
       </div>
@@ -75,9 +75,9 @@
     <section id="questionnaire" class="extra-features bg-primary">
       <div class="container">
         <header class="text-center"style="margin-bottom: 0px">
-          <h2>Find your kit</h2>
+          <h2>Talk to our docs</h2>
           <div class="row">
-            <p class="lead col-lg-8 mx-auto">Don't waste money on testing kits you don't need. With enough information provided, we can determine exactly what kit is right for you.</p>
+            <p class="lead col-lg-8 mx-auto">Let our doctors help you get peace of mind. With enough information provided, our doctors can recommend the right STI testing kit and prescribe medicines.</p>
           </div>
         </header>
         <section class="newsletter" style="padding: 0px">
@@ -88,23 +88,23 @@
                   <div class="tab-content" id="pills-tabContent">
                     <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                       <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
                             <label for="gender">Select your gender at birth.</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="gender">
-                              <option value="F">Female</option>
-                              <option value="M">Male</option>
+                            <select class="custom-select" name="gender" id="gender">
+                              <option value="female">Female</option>
+                              <option value="male">Male</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="sex_act">Are you currently sexually active?</label>
+                            <label for="sexually_active">Are you currently sexually active?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="sex_act">
+                            <select class="custom-select" name="sexually_active" id="sexuallyActive">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
                             </select>
@@ -112,214 +112,215 @@
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="sex_dur">Select the last time you had sex.</label>
+                            <label for="last_sex_timeframe">Select the last time you had sex.</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="sex_dur">
-                              <option value="days">1 to 3 days</option>
-                              <option value="week">4 to 7 days</option>
-                              <option value="weeks">1 to 2 weeks</option>
-                              <option value="month">1 month</option>
-                              <option value="months">Over 1 month</option>
+                            <select class="custom-select" name="last_sex_timeframe" id="last_sex_timeframe">
+                              <option value="1_to_3_days">1 to 3 days</option>
+                              <option value="4_to_7_days">4 to 7 days</option>
+                              <option value="1_to_2_weeks">1 to 2 weeks</option>
+                              <option value="1_month">1 month</option>
+                              <option value="many_months">Over 1 month</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="partner">Select the type of partner(s) you have sex with.</label>
+                            <label for="partner_type">Select the type of partner(s) you have sex with.</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="partner">
-                              <option value="yes">Male</option>
-                              <option value="no">Female</option>
-                              <option value="no">Both</option>
+                            <select class="custom-select" name="partner_type" id="partner_type">
+                              <option value="female">Female</option>
+                              <option value="male">Male</option>
+                              <option value="both">Both</option>
                             </select>
                           </div>
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="multi_partner_yn">Do you have multiple sexual partners?</label>
+                            <label for="multiple_partner_yn">Do you have multiple sexual partners?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="multi_partner_yn">
+                            <select class="custom-select" name="multiple_partner_yn" id="multiple_partner_yn">
                               <option value="yes">Yes</option>
-                              <option value="yes">No</option>
+                              <option value="no">No</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="multi_partner_yn">How often do you use condoms?</label>
+                            <label for="condom_use">How often do you use condoms?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="multi_partner_yn">
-                              <option value="yes">All the time</option>
-                              <option value="yes">Only some of the time</option>
-                              <option value="yes">I never use condoms</option>
+                            <select class="custom-select" name="condom_use" id="condom_use">
+                              <option value="always">All the time</option>
+                              <option value="sometime">Only some of the time</option>
+                              <option value="never">I never use condoms</option>
                             </select>
                           </div>
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="intercourse_type">Select the type(s) of sexual activity you are engaged in.</label>
+                            <label for="sex_act_type">Select the type(s) of sexual activity you are engaged in.</label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Oral
+                              <input class="form-check-input sex_act_type" type="checkbox" value="oral" id="oral"> Oral
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Vaginal
+                              <input class="form-check-input sex_act_type" type="checkbox" value="vaginal" id="vaginal"> Vaginal
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Anal
+                              <input class="form-check-input sex_act_type" type="checkbox" value="anal" id="anal"> Anal
                             </label>
                           </div>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
                             <label for="partner_dx_sti_yn">Has your partner ever been diagnosed with STI?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="partner_dx_sti_yn">
+                            <select class="custom-select" name="partner_dx_sti_yn" id="partner_dx_sti_yn">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
+                              <option value="not_sure">Not sure</option>
                             </select>
                           </div>
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="  col-md-6 col-lg-6">
                           <div class="">
                             <label for="symptoms_desc">What symptoms are you experiencing?</label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Itchiness
+                              <input class="form-check-input symptoms_desc" type="checkbox" value="itchiness" name="itchiness"> Itchiness
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Burning
+                              <input class="form-check-input symptoms_desc" type="checkbox" value="burning" name="burning"> Burning
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Pain
+                              <input class="form-check-input symptoms_desc" type="checkbox" value="pain" name="pain"> Pain
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Blistering
+                              <input class="form-check-input symptoms_desc" type="checkbox" value="blistering" name="blistering"> Blistering
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Redness
+                              <input class="form-check-input symptoms_desc" type="checkbox" value="redness" name="redness"> Redness
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Others
+                              <input class="form-check-input symptoms_desc" type="checkbox" value="others" name="others"> Others
                             </label>
                           </div>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="duration">How long have you been experiencing it?</label>
+                            <label for="smpt_duration">How long have you been experiencing the symptoms?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="duration">
-                              <option value="days">1 to 3 days</option>
-                              <option value="week">4 to 7 days</option>
-                              <option value="weeks">1 to 2 weeks</option>
-                              <option value="month">1 month</option>
-                              <option value="months">Over 1 month</option>
+                            <select class="custom-select" name="smptx_duration" id="smptx_duration">
+                              <option value="1_to_3_days">1 to 3 days</option>
+                              <option value="4_to_7_days">4 to 7 days</option>
+                              <option value="1_to_2_weeks">1 to 2 weeks</option>
+                              <option value="1_month">1 month</option>
+                              <option value="many_months">Over 1 month</option>
                             </select>
                           </div>
                         </div>
                       </div>
                       <div class="row mt-4">
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
                             <label for="smptx_progress">Has your symptoms changed overtime?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="smptx_progress">
+                            <select class="custom-select" name="smptx_progress" id="smptx_progress">
                               <option value="unchanged">No change</option>
                               <option value="worsened">Getting worse</option>
                               <option value="improved">Getting better</option>
-                              <option value="appearance">Becoming different</option>
+                              <option value="changing">Becoming different</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="prev_sti">Check all sexually transmitted infection (STI) that you ever been diagnosed with in the past</label>
+                            <label for="prev_sti_dx">Check all sexually transmitted infections (STIs) that you ever been diagnosed with in the past.</label>
                           </div>
                           <div class="form-check">
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Chlamydia
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="chlamydia" value="chlamydia"> Chlamydia
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Gonorrhea
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="gonorrhea" value="gonorrhea"> Gonorrhea
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Hepatitis A
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="hepatitis_a" value="hepatitis_a"> Hepatitis A
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Hepatitis B
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="hepatitis_b" value="hepatitis_b"> Hepatitis B
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Hepatitis C
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="hepatitis_c" value="hepatitis_c"> Hepatitis C
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Herpes 1
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="herpes_1" value="herpes_1"> Herpes Type 1
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Herpes 2
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="herpes_2" value="herpes_2"> Herpes Type 2
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Trichomoniasis
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="trichomoniasis" value="trichomoniasis"> Trichomoniasis
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> HIV
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="hiv" value="hiv"> HIV
                             </label>
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Syphilis
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="syphilis" value="syphilis"> Syphilis
                             </label>
-
                             <label class="form-check-label">
-                              <input class="form-check-input" type="checkbox"> Other/Not sure
+                              <input class="form-check-input prev_sti_dx" type="checkbox" name="other/not_sure" value="other/not_sure"> Other/Not sure
                             </label>
                           </div>
                         </div>
                       </div>
                       <div class="mt-4">
-                          <label for="symptoms">Where are you experiencing symptoms?</label>
-                          <textarea class="form-control" name="symptoms" rows="3" placeholder="Please include locations, sizes, colors, etc…"></textarea>
+                          <label for="smptx_loc">Where are you experiencing symptoms?</label>
+                          <textarea class="form-control" id="smptx_loc" name="smptx_loc" rows="3" placeholder="Please include locations, sizes, colors, etc…"></textarea>
                       </div>
                       <div class="mt-4">
-                        <label for="symptoms">Have you done anything to help with the symptoms and how effective has it been?</label>
-                        <textarea class="form-control" name="symptoms" rows="3" placeholder=""></textarea>
+                        <label for="smptx_relieve_attempt">Have you done anything to help with the symptoms and how effective has it been?</label>
+                        <textarea class="form-control" name="smptx_relieve_attempt" id="smptx_relieve_attempt" rows="3" placeholder=""></textarea>
                       </div>
                       <div class="mt-4">
-                        <label for="symptoms">Have you ever had these symptoms before? If so, what happened during that episode?</label>
-                        <textarea class="form-control" name="symptoms" rows="3" placeholder=""></textarea>
+                        <label for="smptx_prev">Have you ever had these symptoms before? If so, what happened during that episode?</label>
+                        <textarea class="form-control" name="smptx_prev" id="smptx_prev" rows="3" placeholder=""></textarea>
                       </div>
                       <div class="mt-4">
                         <label for="file_upload">Please upload an image of the affected area(s)</label>
                         <div class="">
                           <label class="custom-file">
                             <input type="file" id="file" class="custom-file-input">
-                            <span class="custom-file-control"></span>
+                            <span class="custom-file-control" data-content=""></span>
                           </label>
+                          <button type="button" class="btn btn-primary navbar-btn" id="uploadBtn" onclick="uploadFile()" disabled>Upload</button>
                         </div>
                       </div>
                       <div class="mt-4">
-                        <label for="email">Please enter your email address to receive your free diagnosis from a Board Certified Medical Doctor.</label>
+                        <label for="email">Please enter your email address to receive your FREE case review from a Board Certified Medical Doctor.</label>
                         <div class="col-md-4 col-lg-4" style="padding-left: 0px">
-                          <input class="form-control" type="email" name="email" placeholder="email@example.com">
+                          <input class="form-control" type="email" name="email" id="email" placeholder="email@example.com">
                         </div>
                       </div>
                       <div class="row mt-5" style="display: inline !important">
                         <div class="text-center">
-                          <button class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Submit</button>
+                          <button class="btn btn-primary navbar-btn btn-shadow btn-gradient" id="submit">Submit</button>
                         </div>
                       </div>
                     </div>
@@ -343,7 +344,7 @@
               <p>&copy; 2017 FindYourSTDKit.com. All rights reserved.</p>
             </div>
             <div class="col-md-5 text-right">
-              <p>Made with love in sunny California</p>
+              <p>Squatting STIs from sunny California.</p>
             </div>
           </div>
         </div>
@@ -358,13 +359,33 @@
     <script src="js/front.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
     <!---->
-    <script>
+    <!-- <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='//www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script> -->
+
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-storage.js"></script> 
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBEJSw9mkG1Bn72oj5gU8c4D2aLZyuD_a0",
+        authDomain: "treatsti-fe090.firebaseapp.com",
+        databaseURL: "https://treatsti-fe090.firebaseio.com",
+        projectId: "treatsti-fe090",
+        storageBucket: "treatsti-fe090.appspot.com",
+        messagingSenderId: "499462429802"
+      };
+      firebase.initializeApp(config);
     </script>
+    <script src="js/custom.js"></script>
+
   </body>
 </html>
