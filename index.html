@@ -303,14 +303,15 @@
                         <textarea class="form-control" name="smptx_prev" id="smptx_prev" rows="3" placeholder=""></textarea>
                       </div>
                       <div class="mt-4">
-                        <label for="file_upload">Please upload an image of the affected area(s)</label>
+                        <label for="file_upload">Please upload one image at a time of the affected area(s). </label>
                         <div class="">
                           <label class="custom-file">
                             <input type="file" id="file" class="custom-file-input">
                             <span class="custom-file-control" data-content=""></span>
                           </label>
-                          <button type="button" class="btn btn-primary navbar-btn" id="uploadBtn" onclick="uploadFile()" disabled>Upload</button>
+                          <p id="uploadPercentage" data-content=""></p>
                         </div>
+
                       </div>
                       <div class="mt-4">
                         <label for="email">Please enter your email address to receive your FREE case review from a Board Certified Medical Doctor.</label>
@@ -320,7 +321,7 @@
                       </div>
                       <div class="row mt-5" style="display: inline !important">
                         <div class="text-center">
-                          <button class="btn btn-primary navbar-btn btn-shadow btn-gradient" id="submit">Submit</button>
+                          <button class="btn btn-primary navbar-btn btn-shadow btn-gradient" id="submit" disabled>Submit</button>
                         </div>
                       </div>
                     </div>
@@ -372,7 +373,7 @@
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-storage.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-storage.js"></script>
     <script>
       // Initialize Firebase
       var config = {

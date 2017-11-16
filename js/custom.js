@@ -17,6 +17,7 @@ $(function(){
     const patientData = gatherData();
 
     writeUserData(uid, patientData);
+    alert("We have received your request. A doctor will contact you shortly.")
 
   })
 
@@ -84,22 +85,37 @@ $(function(){
   $("#file").on("change", function(e){
     selectedFile = e.target.files[0];
     $(".custom-file-control").attr("data-content", selectedFile.name);
-    var uploadBtn = document.getElementById("uploadBtn");
-    uploadBtn.disabled = false;
+    uploadFile();
   })
+
+  function uploadFile(){
+    var fileName = selectedFile.name;
+    var storageRef = firebase.storage().ref('/userImages/' + fileName);
+    var uploadTask = storageRef.put(selectedFile);
+    const uploadPercent = document.getElementById("uploadPercentage");
+
+    uploadTask.on('state_changed', function(snapshot){
+      const percentUpload = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100) + '%';
+      uploadPercent.innerHTML = percentUpload;
+
+    }, function(error){
+      uploadPercent.innerHTML = "Unable to upload, try again."
+    }, function(){
+      var downloadURL = uploadTask.snapshot.downloadURL;
+      uploadPercent.style.color = "green";
+      uploadPercent.innerHTML = "Upload completed! Add another."
+      var submitBtn = document.getElementById("submit");
+      submitBtn.disabled = false;
+    })
+  }
+
+
+
+
+
+
+
+
+
+
 })
-
-function uploadFile(){
-  var fileName = selectedFile.name;
-  var storageRef = firebase.storage().ref('/userImages/' + fileName);
-  var uploadTask = storageRef.put(selectedFile);
-
-  uploadTask.on('state_changed', function(snapshot){
-
-  }, function(error){
-    $(".custom-file-control").attr("data-content", "Error uploading image, try again");
-  }, function(){
-    var downloadURL = uploadTask.snapshot.downloadURL;
-    $(".custom-file-control").attr("data-content", "Upload completed");
-  })
-}
