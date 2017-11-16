@@ -2,6 +2,9 @@
 
 $(function(){
   var selectedFile;
+  var downloadURLs = [];
+  const submitBtn = document.getElementById("submit");
+  const na = document.getElementById("na")
   //generate uid
   const uid = generateUID();
 
@@ -26,6 +29,7 @@ $(function(){
   function writeUserData(uid, patientData) {
     database.ref('users/' + uid).set({
       email: patientData.email,
+      imgURLs: downloadURLs,
       patientData: patientData.questData
     }, function(error){
       if (error){
@@ -92,6 +96,9 @@ $(function(){
 
   //uploading files
   $("#file").on("change", function(e){
+    if (na.checked) {
+      na.checked = !na.checked
+    }
     selectedFile = e.target.files[0];
     $(".custom-file-control").attr("data-content", selectedFile.name);
     uploadFile();
@@ -104,21 +111,35 @@ $(function(){
     const uploadPercent = document.getElementById("uploadPercentage");
 
     uploadTask.on('state_changed', function(snapshot){
-      const percentUpload = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100) + '%';
+      const percentUpload = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100) + '% uploaded';
       uploadPercent.innerHTML = percentUpload;
 
     }, function(error){
       uploadPercent.innerHTML = "Unable to upload, try again."
     }, function(){
       var downloadURL = uploadTask.snapshot.downloadURL;
+      downloadURLs.push(downloadURL);
       uploadPercent.style.color = "green";
-      uploadPercent.innerHTML = "Upload completed!"
+
+      if (downloadURLs.length === 1){
+        uploadPercent.innerHTML = downloadURLs.length + ' image uploaded.'
+      } else if (downloadURLs.length > 1) {
+        uploadPercent.innerHTML = downloadURLs.length + ' images uploaded.'
+      }
+
       $(".custom-file-control").attr("data-content", "Upload another...");
-      var submitBtn = document.getElementById("submit");
+      na.disabled = true;
       submitBtn.disabled = false;
     })
   }
 
+  na.addEventListener("change", function(){
+    if (this.checked) {
+      submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  })
 
 
 

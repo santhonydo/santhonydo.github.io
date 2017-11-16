@@ -42,7 +42,5 @@ button#uploadBtn {
 }
 
 p#uploadPercentage {
-  display: inline-block;
-  margin-left: 20px;
   color: red;
 }
