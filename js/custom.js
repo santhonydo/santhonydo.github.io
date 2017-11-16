@@ -17,14 +17,18 @@ $(function(){
     const patientData = gatherData();
 
     writeUserData(uid, patientData);
-    alert("We have received your request. A doctor will contact you shortly.")
-
   })
 
   function writeUserData(uid, patientData) {
     database.ref('users/' + uid).set({
       email: patientData.email,
       patientData: patientData.questData
+    }, function(error){
+      if (error){
+        alert("Error submitting your questionnaire. Please try again.")
+      } else {
+        alert("We have received your request. A doctor will contact you shortly.")
+      }
     })
   }
 
@@ -103,7 +107,8 @@ $(function(){
     }, function(){
       var downloadURL = uploadTask.snapshot.downloadURL;
       uploadPercent.style.color = "green";
-      uploadPercent.innerHTML = "Upload completed! Add another."
+      uploadPercent.innerHTML = "Upload completed!"
+      $(".custom-file-control").attr("data-content", "Upload another...");
       var submitBtn = document.getElementById("submit");
       submitBtn.disabled = false;
     })
