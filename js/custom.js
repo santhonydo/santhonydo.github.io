@@ -1,7 +1,7 @@
 ;"use strict";
-  var selectedFile;
-$(function(){
 
+$(function(){
+  var selectedFile;
   //generate uid
   const uid = generateUID();
 
@@ -14,9 +14,13 @@ $(function(){
     console.log('submit clicked');
     e.preventDefault();
 
-    const patientData = gatherData();
-
-    writeUserData(uid, patientData);
+    const email = document.getElementById("email").value;
+    if (email === ""){
+      alert("Please enter your email address.");
+    } else {
+      const patientData = gatherData();
+      writeUserData(uid, patientData);
+    }
   })
 
   function writeUserData(uid, patientData) {
@@ -25,9 +29,10 @@ $(function(){
       patientData: patientData.questData
     }, function(error){
       if (error){
-        alert("Error submitting your questionnaire. Please try again.")
+        alert("Error submitting your questionnaire. Please try again.");
       } else {
-        alert("We have received your request. A doctor will contact you shortly.")
+        alert("We have received your request. A doctor will contact you shortly.");
+        location.reload();
       }
     })
   }
