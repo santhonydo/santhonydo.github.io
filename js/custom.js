@@ -4,17 +4,31 @@ $(function(){
   var selectedFile;
   var downloadURLs = [];
   const submitBtn = document.getElementById("submit");
-  const na = document.getElementById("na")
-  //generate uid
-  const uid = generateUID();
+  const na = document.getElementById("na");
+  var uid;
 
   $(".custom-file-control").attr("data-content", "Choose file...")
 
   //get a reference to database service
   var database = firebase.database();
 
+  firebase.auth().signInAnonymously().catch(function(error){
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    location.reload();
+    return
+  })
+
+  firebase.auth().onAuthStateChanged(function(user){
+    if(user){
+      var isAnonymous = user.isAnonymous;
+      uid = user.uid;
+    } else {
+      //user signed out
+    }
+  })
+
   $("form").submit(function(e) {
-    console.log('submit clicked');
     e.preventDefault();
 
     const email = document.getElementById("email").value;
@@ -39,16 +53,6 @@ $(function(){
         location.reload();
       }
     })
-  }
-
-  function generateUID() {
-    // I generate the UID from two parts here
-    // to ensure the random number provide enough bits.
-    var firstPart = (Math.random() * 46656) | 0;
-    var secondPart = (Math.random() * 46656) | 0;
-    firstPart = ("000" + firstPart.toString(36)).slice(-3);
-    secondPart = ("000" + secondPart.toString(36)).slice(-3);
-    return firstPart + secondPart;
   }
 
   function gatherData(){
