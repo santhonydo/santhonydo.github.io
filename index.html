@@ -33,9 +33,27 @@
     gtag('config', 'UA-109847406-1');
   </script>
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">We have received your request.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Thank you for submitting your medical questionnaire. You will receive a personalized recommendation via email from one of our doctors within 24 hours. Be sure to check your spam box.
+          </div>
+
+        </div>
+      </div>
+    </div>
     <!-- navbar-->
     <header class="header">
-      <nav class="navbar navbar-expand-lg fixed-top"><a href="index.html" class="navbar-brand">FindYourSTDKit.com</a>
+      <!-- Button trigger modal -->
+      <nav class="navbar navbar-expand-lg fixed-top"><a href="index.html" class="navbar-brand">TreatSTI.com</a>
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span></span><span></span><span></span></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">

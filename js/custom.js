@@ -49,8 +49,7 @@ $(function(){
       if (error){
         alert("Error submitting your questionnaire. Please try again.");
       } else {
-        alert("We have received your request. A doctor will contact you shortly.");
-        location.reload();
+        $('#successModal').modal('show');
       }
     })
   }
@@ -144,12 +143,6 @@ $(function(){
       submitBtn.disabled = true;
     }
   })
-
-
-
-
-
-
 
 
 
