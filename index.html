@@ -44,7 +44,7 @@
             </button>
           </div>
           <div class="modal-body">
-            Thank you for submitting your medical questionnaire. You will receive a personalized recommendation via email from one of our doctors within 24 hours. Be sure to check your spam box.
+            Thank you for submitting your medical questionnaire. One of our doctors will review your case and advise you within 24 hours.
           </div>
 
         </div>
@@ -342,6 +342,7 @@
                         <div class="col-md-4 col-lg-4" style="padding-left: 0px">
                           <input class="form-control" type="email" name="email" id="email" placeholder="email@example.com">
                         </div>
+                        <p id="emailErrorMsg"></p>
                       </div>
                       <div class="row mt-5" style="display: inline !important">
                         <div class="text-center">
@@ -385,6 +386,7 @@
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="js/front.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-storage.js"></script>

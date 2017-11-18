@@ -44,3 +44,9 @@ button#uploadBtn {
 p#uploadPercentage {
   color: red;
 }
+
+p#emailErrorMsg {
+  font-size: 14px;
+  color: red;
+  font-style: italic;
+}

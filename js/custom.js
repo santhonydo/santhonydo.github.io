@@ -32,9 +32,11 @@ $(function(){
     e.preventDefault();
 
     const email = document.getElementById("email").value;
+    const emailMsg = document.getElementById("emailErrorMsg");
     if (email === ""){
-      alert("Please enter your email address.");
+      emailMsg.innerHTML = "Invalid email entry.";
     } else {
+      emailMsg.innerHTML = "";
       const patientData = gatherData();
       writeUserData(uid, patientData);
     }
@@ -48,11 +50,16 @@ $(function(){
     }, function(error){
       if (error){
         alert("Error submitting your questionnaire. Please try again.");
+        location.reload();
       } else {
         $('#successModal').modal('show');
       }
     })
   }
+
+  $('#successModal').on('hidden.bs.modal', function(){
+    location.reload();
+  })
 
   function gatherData(){
     const questData = {
