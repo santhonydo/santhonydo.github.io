@@ -64,7 +64,7 @@ $(function(){
   function gatherData(){
     const questData = {
       gender: getElementBy("gender"),
-      sexuallyActive: getElementBy("sexuallyActive"),
+      patDOB: getElementBy("pat_dob"),
       lastSexTimeframe: getElementBy("last_sex_timeframe"),
       partnerType: getElementBy("partner_type"),
       multiplePartnerYN: getElementBy("multiple_partner_yn"),

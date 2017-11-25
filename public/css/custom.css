@@ -50,3 +50,19 @@ p#emailErrorMsg {
   color: red;
   font-style: italic;
 }
+
+.custom-number-input {
+  display: inline-block;
+  max-width: 100%;
+  height: calc(2.25rem + 2px);
+  padding: .375rem 1.75rem .375rem .75rem;
+  line-height: 1.25;
+  color: #495057;
+  vertical-align: middle;
+  background-size: 8px 10px;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

@@ -25,13 +25,13 @@
     <!-- Favicon-->
     <!-- <link rel="shortcut icon" href="favicon.png"> -->
   </head>
-  <script async     src="https://www.googletagmanager.com/gtag/js?id=UA-109847406-1"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109847406-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments)};
     gtag('js', new Date());
     gtag('config', 'UA-109847406-1');
-  </script>
+  </script> -->
   <body>
     <!-- Modal -->
     <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -122,13 +122,10 @@
                         </div>
                         <div class="col-md-6 col-lg-6">
                           <div class="">
-                            <label for="sexually_active">Are you currently sexually active?</label>
+                            <label for="pat_dob">What is your age in years?</label>
                           </div>
                           <div class="">
-                            <select class="custom-select" name="sexually_active" id="sexuallyActive">
-                              <option value="yes">Yes</option>
-                              <option value="no">No</option>
-                            </select>
+                            <input class="custom-number-input" type="number" min="16" max="100" name="pat_dob" id="pat_dob">
                           </div>
                         </div>
                       </div>
@@ -144,6 +141,7 @@
                               <option value="1_to_2_weeks">1 to 2 weeks</option>
                               <option value="1_month">1 month</option>
                               <option value="many_months">Over 1 month</option>
+                              <option value="not_sexually_active">Not sexually active</option>
                             </select>
                           </div>
                         </div>
