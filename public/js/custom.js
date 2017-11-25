@@ -44,6 +44,7 @@ $(function(){
 
   function writeUserData(uid, patientData) {
     database.ref('users/' + uid).set({
+      date: Date().toString(),
       email: patientData.email,
       imgURLs: downloadURLs,
       patientData: patientData.questData
@@ -150,7 +151,4 @@ $(function(){
       submitBtn.disabled = true;
     }
   })
-
-
-
 })
