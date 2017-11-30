@@ -43,8 +43,9 @@ $(function(){
   })
 
   function writeUserData(uid, patientData) {
+    const d = Date();
     database.ref('users/' + uid).set({
-      date: Date().toString(),
+      date: d.toString(),
       email: patientData.email,
       imgURLs: downloadURLs,
       patientData: patientData.questData
