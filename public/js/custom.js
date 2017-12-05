@@ -28,19 +28,35 @@ $(function(){
     }
   })
 
-  $("form").submit(function(e) {
-    e.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const emailMsg = document.getElementById("emailErrorMsg");
-    if (email === ""){
-      emailMsg.innerHTML = "Invalid email entry.";
-    } else {
-      emailMsg.innerHTML = "";
-      const patientData = gatherData();
-      writeUserData(uid, patientData);
+  const handleFormSubmission = (token) => {
+    const patientData = gatherData(token);
+    writeUserData(uid, patientData);
+  }
+
+  var handler = StripeCheckout.configure({
+    key: 'pk_test_MLx9pBLy1tr4QhNtcP0OTrCX',
+    image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+    locale: 'auto',
+    token: function(token) {
+      handleFormSubmission(token)
     }
-  })
+  });
+
+  submitBtn.addEventListener('click', function(e) {
+
+    // Open Checkout with further options:
+    handler.open({
+      name: 'TreatSTI.com',
+      description: 'Quick screen',
+      amount: 1999
+    });
+    e.preventDefault();
+  });
+
+  window.addEventListener('popstate', function() {
+    handler.close();
+  });
 
   function writeUserData(uid, patientData) {
     const d = Date();
@@ -51,8 +67,8 @@ $(function(){
       patientData: patientData.questData
     }, function(error){
       if (error){
-        alert("Error submitting your questionnaire. Please try again.");
-        location.reload();
+        alert("Error submitting your questionnaire. Please contact us at help@treatsti.com.");
+        window.location = "https://treatsti.com"
       } else {
         $('#successModal').modal('show');
       }
@@ -60,10 +76,10 @@ $(function(){
   }
 
   $('#successModal').on('hidden.bs.modal', function(){
-    location.reload();
+    window.location = "https://treatsti.com";
   })
 
-  function gatherData(){
+  function gatherData(token){
     const questData = {
       gender: getElementBy("gender"),
       patDOB: getElementBy("pat_dob"),
@@ -82,7 +98,7 @@ $(function(){
       symptomsPrev: getElementBy("smptx_prev")
     };
 
-    const email = getElementBy("email");
+    const email = token.email;
     const patientData = {email, questData}
 
     return patientData

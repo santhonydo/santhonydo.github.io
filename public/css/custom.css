@@ -66,3 +66,12 @@ p#emailErrorMsg {
   -moz-appearance: none;
   appearance: none;
 }
+
+.bg-white {
+  background-color: white;
+}
+
+section.questionnaire .form-holder {
+  background-color: white;
+  padding: 70px 40px;
+}
