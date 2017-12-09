@@ -35,7 +35,7 @@ $(function(){
   }
 
   var handler = StripeCheckout.configure({
-    key: 'pk_test_MLx9pBLy1tr4QhNtcP0OTrCX',
+    key: 'pk_live_8JKBU3uNaBzG8Q7LoQZsh8sb',
     image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
     locale: 'auto',
     token: function(token) {
@@ -156,17 +156,17 @@ $(function(){
       }
 
       $(".custom-file-control").attr("data-content", "Upload another...");
-      na.disabled = true;
-      submitBtn.disabled = false;
+      // na.disabled = true;
+      // submitBtn.disabled = false;
     })
   }
 
-  na.addEventListener("change", function(){
-    if (this.checked) {
-      submitBtn.disabled = false;
-    } else {
-      submitBtn.disabled = true;
-    }
-  })
+  // na.addEventListener("change", function(){
+  //   if (this.checked) {
+  //     submitBtn.disabled = false;
+  //   } else {
+  //     submitBtn.disabled = true;
+  //   }
+  // })
 
 })
