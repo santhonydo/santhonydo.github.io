@@ -32,7 +32,7 @@ $(function(){
 
   //setup stripe payment
   var handler = StripeCheckout.configure({
-    key: 'pk_test_MLx9pBLy1tr4QhNtcP0OTrCX',
+    key: 'pk_live_8JKBU3uNaBzG8Q7LoQZsh8sb',
     image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
     locale: 'auto',
     token: function(token) {
