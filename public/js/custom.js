@@ -39,8 +39,19 @@ $(function(){
     image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
     locale: 'auto',
     token: function(token) {
-      handleFormSubmission(token)
-    }
+				$.ajax({
+					type: 'POST',
+					data: JSON.stringify(token),
+					url: 'https://api.firstdoc.co/charge',
+					success: function(status){
+            console.log(status);
+            handleFormSubmission(token);
+					},
+					error: function(err){
+						alert("Unable to process your card. Please try again or contact us help@treatsti.com");
+					}
+				})
+			}
   });
 
   submitBtn.addEventListener('click', function(e) {
