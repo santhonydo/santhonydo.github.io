@@ -59,8 +59,8 @@ $(function(){
     // Open Checkout with further options:
     handler.open({
       name: 'TreatSTI.com',
-      description: 'Quick screen deposit required.',
-      amount: 1000
+      description: 'Quick screen payment.',
+      amount: 1999
     });
     e.preventDefault();
   });
