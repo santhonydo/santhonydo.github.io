@@ -60,7 +60,7 @@ $(function(){
     handler.open({
       name: 'TreatSTI.com',
       description: 'Quick screen payment.',
-      amount: 1999
+      amount: 1499
     });
     e.preventDefault();
   });
