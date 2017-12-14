@@ -135,9 +135,9 @@ $(function(){
 
   //uploading files
   $("#file").on("change", function(e){
-    if (na.checked) {
-      na.checked = !na.checked
-    }
+    // if (na.checked) {
+    //   na.checked = !na.checked
+    // }
     selectedFile = e.target.files[0];
     $(".custom-file-control").attr("data-content", selectedFile.name);
     uploadFile();
