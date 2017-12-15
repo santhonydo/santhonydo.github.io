@@ -25,9 +25,9 @@ var servicesNavBtn = document.getElementById('servicesNavBtn');
 var testimonialsNavBtn = document.getElementById('testimonialsNavBtn');
 
 if (page === '' || page === 'home.html'){
+  console.log('You are currently on the homepage.')
   //add click event listener to 'Get Answers 1' button
   getAnswersBtn1.addEventListener('click', function(){
-    console.log('You are currently on the homepage.')
     ga('send', 'event', 'Questionnaire', 'click', 'Get Answers 1');
   });
 
@@ -78,12 +78,14 @@ if (page === '' || page === 'home.html'){
 }
 
 if (page === 'home.html' || page === 'screen.html'){
+  console.log('You are currently on the questionnaire page.')
   qFormSubmitBtn.addEventListener('click', function(){
     ga('send', 'event', 'Payment', 'click', 'Submit and Pay Questionnaire');
   });
 }
 
 if (page === 'schedule.html') {
+  console.log('You are currently on the schedule page.')
   bookApptBtn.addEventListener('click', function(){
     ga('send', 'event', 'Payment', 'click', 'Request and Pay MD Appt')
   })
@@ -94,6 +96,7 @@ if (page === 'schedule.html') {
 }
 
 if (page === 'kit.html'){
+  console.log('You are currently on the kit page.')
   getAnswersFromKitBtn.addEventListener('click', function(){
     ga('send', 'event', 'Questionnaire', 'click', 'Get Answers Link From Kit Page');
   });
