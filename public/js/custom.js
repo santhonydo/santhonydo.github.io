@@ -135,9 +135,6 @@ $(function(){
 
   //uploading files
   $("#file").on("change", function(e){
-    // if (na.checked) {
-    //   na.checked = !na.checked
-    // }
     selectedFile = e.target.files[0];
     $(".custom-file-control").attr("data-content", selectedFile.name);
     uploadFile();
@@ -167,17 +164,6 @@ $(function(){
       }
 
       $(".custom-file-control").attr("data-content", "Upload another...");
-      // na.disabled = true;
-      // submitBtn.disabled = false;
     })
   }
-
-  // na.addEventListener("change", function(){
-  //   if (this.checked) {
-  //     submitBtn.disabled = false;
-  //   } else {
-  //     submitBtn.disabled = true;
-  //   }
-  // })
-
 })

@@ -57,13 +57,13 @@
         <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><span></span><span></span><span></span></button>
         <div id="navbarSupportedContent" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">
-            <li class="nav-item"><a href="#about-us" class="nav-link link-scroll">About Us</a></li>
-            <li class="nav-item"><a href="#browser" class="nav-link link-scroll">How it works</a></li>
-            <li class="nav-item"><a href="#features" class="nav-link link-scroll">Our Services</a></li>
-            <li class="nav-item"><a href="#testimonials" class="nav-link link-scroll">Testimonials</a></li>
+            <li class="nav-item"><a id="aboutUsNavBtn" href="#about-us" class="nav-link link-scroll">About Us</a></li>
+            <li class="nav-item"><a id="howItWorksNavBtn" href="#browser" class="nav-link link-scroll">How it works</a></li>
+            <li class="nav-item"><a id="servicesNavBtn" href="#features" class="nav-link link-scroll">Our Services</a></li>
+            <li class="nav-item"><a id="testimonialsNavBtn" href="#testimonials" class="nav-link link-scroll">Testimonials</a></li>
           </ul>
           <div class="navbar-text">
-            <a href="screen.html" class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Get Answers | $14.99</a>
+            <a href="screen.html" id="getAnswersBtn1" class="btn btn-primary navbar-btn btn-shadow btn-gradient link-scroll">Get Answers | $14.99</a>
           </div>
         </div>
       </nav>
@@ -75,7 +75,7 @@
           <div class="col-lg-6 text order-2 order-lg-1">
             <h1>Quick &amp; Easy Anonymous Testing</h1>
             <p class="hero-text">Think you might have a sexual transmitted infection (STI/STD)? Simply complete our quick medical questionnaire and upload any pictures of your skin condition or symptoms. Our doctors will advise you within 24 hours.</p>
-            <div class="CTA"><a href="screen.html" class="btn btn-primary btn-shadow btn-gradient link-scroll">Get Answers | $14.99</a><a href="#browser" class="btn btn-outline-primary link-scroll">See how it works</a></div>
+            <div class="CTA"><a href="screen.html" id="getAnswersBtn2" class="btn btn-primary btn-shadow btn-gradient link-scroll">Get Answers | $14.99</a><a href="#browser" id="howItWorksBtn" class="btn btn-outline-primary link-scroll">See how it works</a></div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2"><img src="img/couple.jpg" alt="..." class="img-fluid"></div>
         </div>
@@ -112,23 +112,21 @@
         <p class="lead col-lg-8 mx-auto mb-5 text-center">Your peace of mind is our business</p>
         <div class="row d-flex align-items-center mb-6">
           <div class="text col-lg-6 order-2 order-lg-1">
-            <!-- <div class="icon"><img src="img/screen_icon.png" alt="..." class="img-fluid"></div> -->
             <h4>Quick Screen</h4>
             <p>Not sure if you have an STD, or which testing kit to use?</p>
             <p>Complete a quick medical questionnaire. <b>Our doctors will advise you within 24 hours.</b></p>
-            <a href="screen.html" class="btn btn-primary btn-shadow btn-gradient">Get Answers | $14.99</a>
+            <a href="screen.html" id="getAnswersBtn3" class="btn btn-primary btn-shadow btn-gradient">Get Answers | $14.99</a>
           </div>
           <div class="image col-lg-6 order-1 order-lg-2"><img src="img/screen.jpg" alt="..." class="img-fluid"></div>
         </div>
         <div class="row d-flex align-items-center mb-6">
           <div class="image col-lg-6"><img src="img/package.jpg" alt="..." class="img-fluid"></div>
           <div class="text col-lg-6">
-            <!-- <div class="icon"><img src="img/hourglass.svg" alt="..." class="img-fluid"></div> -->
             <h4>Testing Kit Delivery</h4>
             <p>Already know which testing kit you need?</p>
             <p>Get <b>same-day delivery</b> of your testing kit straight to your home in an anonymous package.</p>
             <p>Kit prices vary + $4.99 delivery fee.</p>
-            <a href="kit.html" class="btn btn-primary btn-shadow btn-gradient">Select Your Kit</a>
+            <a href="kit.html" id="stiKitsBtn" class="btn btn-primary btn-shadow btn-gradient">Select Your Kit</a>
           </div>
         </div>
         <div class="row d-flex align-items-center mb-6">
@@ -137,7 +135,7 @@
             <h4>Speak with a Doctor</h4>
             <p>Set up a phone or video consult with our trusted doctors.</p>
             <p>Get a diagnosis or help understanding your test results. Recieve prescriptions and treatment options.</p>
-            <a href="schedule.html" class="btn btn-primary btn-shadow btn-gradient">Schedule Now! | $39.99 per session</a>
+            <a href="schedule.html" id="virtualVisitScheduleBtn" class="btn btn-primary btn-shadow btn-gradient">Schedule Now! | $39.99 per session</a>
           </div>
           <div class="image col-lg-6 order-1 order-lg-2"><img src="img/chatmd.jpg" alt="..." class="img-fluid"></div>
         </div>
@@ -215,5 +213,6 @@
     <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
     <script src="js/front.js"></script>
+    <script src="js/ga.js"></script>
   </body>
 </html>
