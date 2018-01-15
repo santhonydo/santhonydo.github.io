@@ -65,7 +65,7 @@ $(function(){
     handler.open({
       name: 'TreatSTI.com',
       description: 'Virtual appointment deposit required.',
-      amount: 1499
+      amount: 1199
     });
     e.preventDefault();
   });
