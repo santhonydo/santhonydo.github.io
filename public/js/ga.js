@@ -4,12 +4,14 @@
 
 var path = window.location.pathname;
 var page = path.split('/').pop();
-console.log(page);
 
 //get buttons reference
-var getAnswersBtn1 = document.getElementById('getAnswersBtn1');
+
 var getAnswersBtn2 = document.getElementById('getAnswersBtn2');
 var getAnswersBtn3 = document.getElementById('getAnswersBtn3');
+var basicBtn = document.getElementById('basicBtn');
+var standardBtn = document.getElementById('standardBtn');
+var premiumBtn = document.getElementById('premiumBtn');
 var getAnswersFromScheduleBtn = document.getElementById('getAnswersFromScheduleBtn');
 var getAnswersFromKitBtn = document.getElementById('getAnswersFromKitBtn');
 var howItWorksBtn = document.getElementById('howItWorksBtn');
@@ -25,10 +27,19 @@ var servicesNavBtn = document.getElementById('servicesNavBtn');
 var testimonialsNavBtn = document.getElementById('testimonialsNavBtn');
 
 if (page === '' || page === 'home.html'){
-  console.log('You are currently on the homepage.')
-  //add click event listener to 'Get Answers 1' button
-  getAnswersBtn1.addEventListener('click', function(){
-    ga('send', 'event', 'Questionnaire', 'click', 'Get Answers 1');
+  //add click event listerner to 'Basic' button
+  basicBtn.addEventListener('click', function(){
+    ga('send', 'event', 'Service', 'click', 'Basic Service');
+  });
+
+  //add click event listerner to 'Standard' button
+  standardBtn.addEventListener('click', function(){
+    ga('send', 'event', 'Service', 'click', 'Standard Service');
+  });
+
+  //add click event listerner to 'Premium' button
+  premiumBtn.addEventListener('click', function(){
+    ga('send', 'event', 'Service', 'click', 'Premium Service');
   });
 
   //add click event listener to 'Get Answers 2' button
@@ -78,7 +89,6 @@ if (page === '' || page === 'home.html'){
 }
 
 if (page === 'home.html' || page === 'screen.html'){
-  console.log('You are currently on the questionnaire page.')
   qFormSubmitBtn.addEventListener('click', function(){
     ga('send', 'event', 'Payment', 'click', 'Submit and Pay Questionnaire');
   });
@@ -96,7 +106,6 @@ if (page === 'schedule.html') {
 }
 
 if (page === 'kit.html'){
-  console.log('You are currently on the kit page.')
   getAnswersFromKitBtn.addEventListener('click', function(){
     ga('send', 'event', 'Questionnaire', 'click', 'Get Answers Link From Kit Page');
   });
