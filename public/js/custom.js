@@ -28,7 +28,6 @@ $(function(){
     }
   })
 
-
   const handleFormSubmission = (token) => {
     const patientData = gatherData(token);
     writeUserData(uid, patientData);
@@ -39,12 +38,12 @@ $(function(){
     image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
     locale: 'auto',
     token: function(token) {
+      token.servicePackage = currentPage();
 				$.ajax({
 					type: 'POST',
 					data: JSON.stringify(token),
 					url: 'https://api.firstdoc.co/charge',
 					success: function(status){
-            console.log(status);
             handleFormSubmission(token);
 					},
 					error: function(err){
@@ -55,12 +54,26 @@ $(function(){
   });
 
   submitBtn.addEventListener('click', function(e) {
+    var param = currentPage();
+    var price;
+    var description;
+
+    if (param === 'basic') {
+      price = 1999;
+      description = 'Basic service package.';
+    } else if (param === 'standard') {
+      price = 7999;
+      description = 'Standard service package.';
+    } else if (param === 'premium'){
+      price = 11999;
+      description = 'Premium service package.';
+    }
 
     // Open Checkout with further options:
     handler.open({
       name: 'TreatSTI.com',
-      description: 'Quick screen payment.',
-      amount: 1199
+      description: description,
+      amount: price
     });
     e.preventDefault();
   });
@@ -92,6 +105,7 @@ $(function(){
 
   function gatherData(token){
     const questData = {
+      servicePackage: currentPage(),
       gender: getElementBy("gender"),
       patDOB: getElementBy("pat_dob"),
       lastSexTimeframe: getElementBy("last_sex_timeframe"),
@@ -165,5 +179,15 @@ $(function(){
 
       $(".custom-file-control").attr("data-content", "Upload another...");
     })
+  }
+
+  //get current URL page
+
+  function currentPage(){
+    var urlParam = window.location.search;
+    var paramSplit = urlParam.split("?");
+    var param = paramSplit[1];
+
+    return param;
   }
 })

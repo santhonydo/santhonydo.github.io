@@ -1,6 +1,5 @@
 /* your styles go here */
 
-
 .custom-file-control::before {
   content: "Browse";
   position: absolute;
@@ -74,4 +73,56 @@ p#emailErrorMsg {
 section.questionnaire .form-holder {
   background-color: white;
   padding: 70px 40px;
+}
+
+/*style for kit page*/
+.pricebox {
+  border: 1px solid blue;
+  border-radius: 15px;
+  height: 100%;
+  padding: 30px;
+  margin-top: 30px
+}
+
+.bottombtn {
+  position: absolute;
+  right: 35px;
+  bottom: 5px;
+
+}
+
+.pricebox > strong {
+  color: #5989e5;
+  font-size: 1.55rem;
+}
+
+.boxtop {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.table > thead > tr > th {
+  text-align: center;
+}
+
+.planheader > strong{
+  font-size: 1.55rem;
+}
+
+.fa-check {
+  font-size: 25px;
+  color: #37cfdc;;
+}
+
+.fa-times {
+  font-size: 25px;
+  color: red;
+}
+
+.price > strong {
+  font-size: 1.25rem;
+}
+
+.premiumprice {
+  color: #37cfdc;
 }
