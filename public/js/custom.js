@@ -59,7 +59,7 @@ $(function(){
     var description;
 
     if (param === 'basic') {
-      price = 1999;
+      price = 1199;
       description = 'Basic service package.';
     } else if (param === 'standard') {
       price = 7999;
