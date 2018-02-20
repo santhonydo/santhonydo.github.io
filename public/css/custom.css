@@ -126,3 +126,23 @@ section.questionnaire .form-holder {
 .premiumprice {
   color: #37cfdc;
 }
+
+.btn-accordion:focus {
+  box-shadow: 0 0 0 0px !important;
+  -webkit-box-shadow: 0 0 0 0px !important;
+}
+
+@media (min-width:992px) {
+  .desktop-only{
+    display:block !important;
+  }
+}
+
+@media (max-width:991px) {
+  .mobile-only{
+    display: block !important;
+  }
+  .desktop-only{
+    display: none !important;
+  }
+}

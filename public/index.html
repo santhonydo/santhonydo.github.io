@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>TreatSTI.com: Peace of Mind</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=user-scalable">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
@@ -118,7 +118,7 @@
         </div>
         <div class="row">
           <div class="boxtop">
-            <table class="table">
+            <table class="table desktop-only">
               <thead>
                 <tr class="table-primary">
                   <th></th>
@@ -196,6 +196,67 @@
                 </tr>
               </tbody>
             </table>
+            <div id="accordion" class="mobile-only">
+              <div class="card">
+                <div class="card-header" id="headingOne">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link btn-accordion" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong>Basic</strong>
+                    </button>
+                    <a href="screen.html?basic" class="btn btn-sm btn-outline-primary float-right" id="basicBtn" >$11.99</a>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                      <li>Quick & Easy Health Questionnaire</li>
+                      <li>Doctor's Assessment Within 24 Hours</li>
+                      <li>100% Anonymous</li>
+                      <li>Find Out if Your Symptoms are STD-related</li>
+                      <li>Recommendation for STD testing Kit, if needed (Chlamydia, Gonorrhea, HIV, etc.)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingTwo">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link btn-accordion collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong>Standard*</strong>
+                    </button>
+                    <a href="screen.html?standard" class="btn btn-sm btn-outline-primary pull-right" id="standardBtn" >$79.99</a>
+                  </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                      <li>Includes all basic services</li>
+                      <li>Home Testing Kit</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header" id="headingThree">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link btn-accordion collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong>Premium*</strong>
+                    </button>
+                    <a href="screen.html?premium" class="btn btn-sm btn-outline-primary pull-right" id="premiumBtn" >$119.99</a>
+                  </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                  <div class="card-body">
+                    <ul>
+                      <li>Includes all standard services</li>
+                      <li>Private Phone or Video Consult with Doctor</li>
+                      <li>Prescriptions Sent Directly to Your Pharmacy</li>
+                      <li>Follow-Up Consult to Ensure Symptoms Resolved</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
             <p>* Save money with our Standard or Premium service package. We will refund you the difference and you only pay $11.99 if our doctors don't think your symptoms are STD related based on your health questionnaire.</p>
           </div>
         </div>
