@@ -25,6 +25,7 @@ var aboutUsNavBtn = document.getElementById('aboutUsNavBtn');
 var howItWorksNavBtn = document.getElementById('howItWorksNavBtn');
 var servicesNavBtn = document.getElementById('servicesNavBtn');
 var testimonialsNavBtn = document.getElementById('testimonialsNavBtn');
+var blogNavBtn = document.getElementById('blogNavBtn');
 
 if (page === '' || page === 'home.html'){
   //add click event listerner to 'Basic' button
@@ -85,6 +86,11 @@ if (page === '' || page === 'home.html'){
   //add click event listener to 'Testimonials Navigation Link' button
   testimonialsNavBtn.addEventListener('click', function(){
     ga('send', 'event', 'More Info', 'click', 'Testimonials Nav Link');
+  });
+
+  //add click event listener to 'Blog Navigation Link' button
+  blogNavBtn.addEventListener('click', function(){
+    ga('send', 'event', 'More Info', 'click', 'Blog Nav Link');
   });
 }
 
