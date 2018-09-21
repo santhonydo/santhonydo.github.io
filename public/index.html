@@ -25,30 +25,8 @@
     <!-- Favicon-->
     <!-- <link rel="shortcut icon" href="favicon.png"> -->
   </head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109847406-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)};
-    gtag('js', new Date());
-    gtag('config', 'UA-109847406-1');
-  </script>
   <style>.async-hide { opacity: 0 !important} </style>
-  <script>
-    (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-    })(window,document.documentElement,'async-hide','dataLayer',4000,
-    {'GTM-TXC7HXP':true});
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-109847406-1', 'auto');
-    ga('require', 'GTM-TXC7HXP');
-    ga('send', 'pageview');
-  </script>
+
   <body>
     <!-- navbar-->
     <header class="header">
@@ -59,8 +37,9 @@
           <ul class="navbar-nav ml-auto align-items-start align-items-lg-center">
             <li class="nav-item"><a id="aboutUsNavBtn" href="#about-us" class="nav-link link-scroll">About Us</a></li>
             <li class="nav-item"><a id="blogNavBtn" href="https://blog.treatsti.com" class="nav-link">Blog</a></li>
-            <li class="nav-item"><a id="howItWorksNavBtn" href="#browser" class="nav-link link-scroll">How it works</a></li>
-            <li class="nav-item"><a id="servicesNavBtn" href="#features" class="nav-link link-scroll">Our Services</a></li>
+            <li class="nav-item"><a id="forumNavBtn" href="https://blog.treatsti.com/dwqa-questions/" class="nav-link">Community Q&amp;A</a></li>
+            <li class="nav-item"><a id="howItWorksNavBtn" href="#howitworks" class="nav-link link-scroll">How it works</a></li>
+            <li class="nav-item"><a id="servicesNavBtn" href="#price" class="nav-link link-scroll">Our Services</a></li>
             <li class="nav-item"><a id="testimonialsNavBtn" href="#testimonials" class="nav-link link-scroll">Testimonials</a></li>
           </ul>
         </div>
@@ -73,13 +52,16 @@
           <div class="col-lg-6 text order-2 order-lg-1">
             <h1>Quick &amp; Easy Anonymous Testing</h1>
             <p class="hero-text">Think you might have a sexual transmitted infection (STI/STD)? Simply complete our quick medical questionnaire and upload any pictures of your skin condition or symptoms. Our doctors will advise you within 24 hours.</p>
-            <div class="CTA"><a href="#features" id="getAnswersBtn2" class="btn btn-primary btn-shadow btn-gradient link-scroll">Get Answers</a><a href="#browser" id="howItWorksBtn" class="btn btn-outline-primary link-scroll">See how it works</a></div>
+            <div class="CTA">
+              <a href="#price" id="getAnswersBtn2" class="btn btn-primary btn-shadow btn-gradient link-scroll">Get Answers</a>
+              <a href="https://app.treatsti.com/result" id="howItWorksBtn" class="btn btn-outline-primary link-scroll">View my results</a>
+            </div>
           </div>
           <div class="col-lg-6 order-1 order-lg-2"><img src="img/couple.jpg" alt="..." class="img-fluid"></div>
         </div>
       </div>
     </section>
-    <section id="browser" class="browser">
+    <section id="howitworks" class="browser">
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-lg-8 text-center">
@@ -108,7 +90,7 @@
 
       </div>
     </section>
-    <section id="features" class="features">
+    <section id="price" class="features">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
@@ -130,9 +112,9 @@
               <tbody>
                 <tr>
                   <td></td>
-                  <td class="text-center price"><strong>$11.99</strong></td>
+                  <td class="text-center price"><strong>$9.99</strong></td>
                   <td class="text-center price"><strong>$79.99</strong></td>
-                  <td class="text-center price premiumprice"><strong>$119.99</strong></td>
+                  <td class="text-center price premiumprice"><strong>$199.99</strong></td>
                 </tr>
                 <tr>
                   <td class="pricedetails">Quick & Easy Health Questionnaire</td>
@@ -190,9 +172,9 @@
                 </tr>
                 <tr class="text-center">
                   <td></td>
-                  <td><a href="screen.html?basic" class="btn btn-primary btn-shadow btn-gradient" id="basicBtn" >Get</a></td>
-                  <td><a href="screen.html?standard" class="btn btn-primary btn-shadow btn-gradient" id="standardBtn" >Get</a></td>
-                  <td><a href="screen.html?premium" class="btn btn-primary btn-shadow btn-gradient" id="premiumBtn" >Get</a></td>
+                  <td><a href="https://app.treatsti.com/?basic" class="btn btn-primary btn-shadow btn-gradient" id="basicBtn" >Get</a></td>
+                  <td><a href="https://app.treatsti.com/?standard" class="btn btn-primary btn-shadow btn-gradient" id="standardBtn" >Get</a></td>
+                  <td><a href="https://app.treatsti.com/?premium" class="btn btn-primary btn-shadow btn-gradient" id="premiumBtn" >Get</a></td>
                 </tr>
               </tbody>
             </table>
@@ -203,7 +185,7 @@
                     <button class="btn btn-link btn-accordion" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <strong>Basic</strong>
                     </button>
-                    <a href="screen.html?basic" class="btn btn-sm btn-outline-primary float-right" id="basicBtn" >$11.99</a>
+                    <a href="https://app.treatsti.com/?basic" class="btn btn-sm btn-outline-primary float-right" id="basicBtn" >$9.99</a>
                   </h5>
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
@@ -224,7 +206,7 @@
                     <button class="btn btn-link btn-accordion collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                       <strong>Standard*</strong>
                     </button>
-                    <a href="screen.html?standard" class="btn btn-sm btn-outline-primary pull-right" id="standardBtn" >$79.99</a>
+                    <a href="https://app.treatsti.com/?standard" class="btn btn-sm btn-outline-primary pull-right" id="standardBtn" >$79.99</a>
                   </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -242,7 +224,7 @@
                     <button class="btn btn-link btn-accordion collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                       <strong>Premium*</strong>
                     </button>
-                    <a href="screen.html?premium" class="btn btn-sm btn-outline-primary pull-right" id="premiumBtn" >$119.99</a>
+                    <a href="https://app.treatsti.com/?premium" class="btn btn-sm btn-outline-primary pull-right" id="premiumBtn" >$199.99</a>
                   </h5>
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
@@ -257,7 +239,7 @@
                 </div>
               </div>
             </div>
-            <p>* Save money with our Standard or Premium service package. We will refund you the difference and you only pay $11.99 if our doctors don't think your symptoms are STD related based on your health questionnaire.</p>
+            <p>* Save money with our Standard or Premium service package. We will refund you the difference and you only pay $9.99 if our doctors don't think your symptoms are STD related based on your health questionnaire.</p>
           </div>
         </div>
       </div>
@@ -320,7 +302,7 @@
               <p>help@treatsti.com</p>
             </div>
             <div class="col-md-5 text-right">
-              <p>&copy; 2017 TreatSTI.com</p>
+              <p>&copy; 2018 TreatSTI.com</p>
               <p>All rights reserved.</p>
             </div>
           </div>
@@ -328,6 +310,29 @@
       </div>
     </footer>
     <!-- Javascript files-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109847406-1"></script>
+    <script async>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', 'UA-109847406-1');
+    </script>
+    <script async>
+      (function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+      h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+      (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+      })(window,document.documentElement,'async-hide','dataLayer',4000,
+      {'GTM-TXC7HXP':true});
+    </script>
+    <script async>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-109847406-1', 'auto');
+      ga('require', 'GTM-TXC7HXP');
+      ga('send', 'pageview');
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
